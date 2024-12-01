@@ -19,4 +19,122 @@ icon:github-square[link=https://github.com/2425-3ahitm-sew/2425-3ahitm-sew-lectu
 icon:home[link=http://edufs.edu.htl-leonding.ac.at/~t.stuetz/hugo/2021/01/lecture-notes/]
 endif::backend-html5[]
 
-== 2024-09-xx
+== Exkurs: JavaFX-Spinner
+
+
+A `Spinner` in JavaFX is a UI control that allows users to select a value from a sequence by either typing it or using arrow buttons to increment/decrement the value.
+
+=== Basic Usage
+
+To create a numeric `Spinner`:
+
+[source,java]
+----
+import javafx.application.Application;
+import javafx.scene.Scene;
+import javafx.scene.control.Spinner;
+import javafx.scene.control.SpinnerValueFactory;
+import javafx.scene.layout.VBox;
+import javafx.stage.Stage;
+
+public class SpinnerExample extends Application {
+
+    @Override
+    public void start(Stage stage) {
+        // Create a Spinner for numbers
+        Spinner<Integer> spinner = new Spinner<>();
+
+        // Set the value factory (range: 1 to 100, initial value: 50, step: 1)
+        spinner.setValueFactory(new SpinnerValueFactory.IntegerSpinnerValueFactory(1, 100, 50, 1));
+
+        // Add spinner to the scene
+        VBox root = new VBox(10, spinner);
+        root.setStyle("-fx-padding: 20; -fx-alignment: center;");
+
+        Scene scene = new Scene(root, 300, 200);
+        stage.setScene(scene);
+        stage.setTitle("JavaFX Spinner Example");
+        stage.show();
+    }
+
+    public static void main(String[] args) {
+        launch();
+    }
+}
+----
+
+=== Spinner with Strings
+
+A `Spinner` can use a list of values, such as strings:
+
+[source,java]
+----
+Spinner<String> stringSpinner = new Spinner<>();
+SpinnerValueFactory<String> valueFactory =
+    new SpinnerValueFactory.ListSpinnerValueFactory<>(FXCollections.observableArrayList("Option 1", "Option 2", "Option 3"));
+
+stringSpinner.setValueFactory(valueFactory);
+----
+
+=== Event Handling
+
+You can listen to changes in the spinner’s value using a listener:
+
+[source,java]
+----
+spinner.valueProperty().addListener((observable, oldValue, newValue) -> {
+    System.out.println("Selected Value: " + newValue);
+});
+----
+
+=== Editable Spinner
+
+By default, a `Spinner` is editable. You can disable editing as follows:
+
+[source,java]
+----
+spinner.setEditable(false);
+----
+
+=== Styling the Spinner
+
+The `Spinner` can be styled using CSS:
+
+[source,css]
+----
+.spinner {
+    -fx-background-color: lightblue;
+    -fx-padding: 5;
+}
+----
+
+To apply the CSS file:
+[source,java]
+----
+scene.getStylesheets().add("style.css");
+----
+
+=== Advanced Example: Spinner with Different Step Sizes
+
+You can configure a `Spinner` with specific step sizes:
+[source,java]
+----
+Spinner<Double> doubleSpinner = new Spinner<>();
+doubleSpinner.setValueFactory(new SpinnerValueFactory.DoubleSpinnerValueFactory(0.0, 10.0, 5.0, 0.5));
+----
+
+=== Common Methods
+
+- `getValue()`: Retrieves the current value of the spinner.
+- `setValue()`: Sets a specific value for the spinner.
+- `increment(int steps)`: Increases the spinner's value by a specified number of steps.
+- `decrement(int steps)`: Decreases the spinner's value by a specified number of steps.
+
+=== References
+
+- JavaFX API Reference: https://openjfx.io/javadoc/17/javafx.controls/javafx/scene/control/Spinner.html[Spinner Documentation]
+- JavaFX Tutorials: https://code.makery.ch/library/javafx-tutorial/[CodeMakery JavaFX Tutorials]
+
+
+IMPORTANT: This content was createt with ChatGPT (Prompt: How to to use spinner in JavaFx)
+
