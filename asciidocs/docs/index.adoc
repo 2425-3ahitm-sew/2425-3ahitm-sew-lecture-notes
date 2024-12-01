@@ -20,9 +20,6 @@ icon:home[link=http://edufs.edu.htl-leonding.ac.at/~t.stuetz/hugo/2021/01/lectur
 endif::backend-html5[]
 
 
-https://github.com/2425-3ahitm-sew/2425-3ahitm-sew-lecture-notes/blob/main/asciidocs/docs/index.adoc
-
-refs/heads/main/asciidocs/docs/index.adoc
 
 == Exkurs: JavaFX-Spinner
 
