@@ -134,9 +134,8 @@ doubleSpinner.setValueFactory(new SpinnerValueFactory.DoubleSpinnerValueFactory(
 
 === References
 
-- JavaFX API Reference: https://openjfx.io/javadoc/17/javafx.controls/javafx/scene/control/Spinner.html[Spinner Documentation]
-- JavaFX Tutorials: https://code.makery.ch/library/javafx-tutorial/[CodeMakery JavaFX Tutorials]
-
+* JavaFX API Reference: https://openjfx.io/javadoc/23/javafx.controls/javafx/scene/control/Spinner.html[Spinner Documentation]
+* JavaFX Tutorials: https://code.makery.ch/library/javafx-tutorial/[CodeMakery JavaFX Tutorials]
 
 IMPORTANT: This content was createt with ChatGPT (Prompt: How to to use spinner in JavaFx)
 
