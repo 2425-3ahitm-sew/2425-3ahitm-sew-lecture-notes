@@ -8,11 +8,12 @@ public class CounterImp implements Runnable {
     @Override
     public void run() {
         int localCount = 0;
-        synchronized (getClass()) {
-
-            while (totalCount < maxTotalCount) {
-                totalCount++;
-                localCount++;
+        while (totalCount < maxTotalCount) {
+            synchronized (getClass()) {
+                if (totalCount < maxTotalCount) {
+                    totalCount++;
+                    localCount++;
+                }
             }
         }
         System.out.printf("%s: %d/%d%n", Thread.currentThread().getName(), localCount, maxTotalCount);
