@@ -6,12 +6,12 @@ public class CounterImp implements Runnable {
     int maxTotalCount = 100_000;
 
     @Override
-    public void run() {
+    public synchronized void run() {
         int localCount = 0;
         while (totalCount < maxTotalCount) {
             totalCount++;
             localCount++;
         }
-        System.out.println(localCount);
+        System.out.printf("%s: %d/%d%n",Thread.currentThread().getName(),localCount, maxTotalCount);
     }
 }
