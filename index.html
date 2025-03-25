@@ -556,7 +556,7 @@ pre.rouge .gs {
 <div class="details">
 <span id="author" class="author">Thomas W. Stütz</span><br>
 <span id="revnumber">version 1.0.0,</span>
-<span id="revdate">2025-02-10</span>
+<span id="revdate">2025-03-25</span>
 <br><span id="revremark">Softwareentwicklung</span>
 </div>
 <div id="toc" class="toc2">
@@ -572,6 +572,11 @@ pre.rouge .gs {
 <li><a href="#_advanced_example_spinner_with_different_step_sizes">1.6. Advanced Example: Spinner with Different Step Sizes</a></li>
 <li><a href="#_common_methods">1.7. Common Methods</a></li>
 <li><a href="#_references">1.8. References</a></li>
+</ul>
+</li>
+<li><a href="#_2025_03_25">2. 2025-03-25</a>
+<ul class="sectlevel2">
+<li><a href="#_sockets">2.1. Sockets</a></li>
 </ul>
 </li>
 </ul>
@@ -753,11 +758,53 @@ This content was createt with ChatGPT (Prompt: How to to use spinner in JavaFx)
 </div>
 </div>
 </div>
+<div class="sect1">
+<h2 id="_2025_03_25"><a class="anchor" href="#_2025_03_25"></a>2. 2025-03-25</h2>
+<div class="sectionbody">
+<div class="sect2">
+<h3 id="_sockets"><a class="anchor" href="#_sockets"></a>2.1. Sockets</h3>
+<div class="listingblock">
+<div class="title">Erstellen des ServerSockets</div>
+<div class="content">
+<pre class="rouge highlight"><code data-lang="java"><span class="kt">var</span> <span class="n">serverSocket</span> <span class="o">=</span> <span class="nc">ServerSocketFactory</span>
+                <span class="o">.</span><span class="na">getDefault</span><span class="o">()</span>
+                <span class="o">.</span><span class="na">createServerSocket</span><span class="o">(</span><span class="mi">8080</span><span class="o">);</span></code></pre>
+</div>
+</div>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>Handler für einkommende Requests (ClientSocket)</p>
+</li>
+</ol>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre>Socket clientSocket = serverSocket.accept();
+handleConnect(clientSocket);</pre>
+</div>
+</div>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>Streams für Input und Output</p>
+</li>
+</ol>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre>var outputStream = clientSocket.getOutputStream();
+var inputStream = clientSocket.getInputStream();</pre>
+</div>
+</div>
+</div>
+</div>
+</div>
 </div>
 <div id="footer">
 <div id="footer-text">
 Version 1.0.0<br>
-Last updated 2025-02-10 14:14:41 UTC
+Last updated 2025-03-25 08:00:38 UTC
 </div>
 </div>
 </body>
