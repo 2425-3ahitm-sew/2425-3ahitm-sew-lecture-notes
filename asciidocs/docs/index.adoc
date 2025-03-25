@@ -139,3 +139,28 @@ doubleSpinner.setValueFactory(new SpinnerValueFactory.DoubleSpinnerValueFactory(
 
 IMPORTANT: This content was createt with ChatGPT (Prompt: How to to use spinner in JavaFx)
 
+== 2025-03-25
+
+=== Sockets
+
+.Erstellen des ServerSockets
+[source,java]
+----
+var serverSocket = ServerSocketFactory
+                .getDefault()
+                .createServerSocket(8080);
+----
+
+. Handler für einkommende Requests (ClientSocket)
+[source,java]
+----
+Socket clientSocket = serverSocket.accept();
+handleConnect(clientSocket);
+----
+
+. Streams für Input und Output
+[source,java]
+----
+var outputStream = clientSocket.getOutputStream();
+var inputStream = clientSocket.getInputStream();
+----
