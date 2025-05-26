@@ -164,3 +164,50 @@ handleConnect(clientSocket);
 var outputStream = clientSocket.getOutputStream();
 var inputStream = clientSocket.getInputStream();
 ----
+
+== 2025-05-26
+
+=== Übung
+
+* Erstellen Sie eine Liste der Klasse mit Vor- und Nachnamen sowie der PLZ
+
+* Nun erstellen Sie für Vor- und Nachnamen sowie die PLZT jeweils einen binären Suchbaum. Als Datenelement verwenden Sie den Index der einzelnen Elemente (Personen) in der Liste
+
+* Bei gleichen Elementen in Personen (zB PLZ 4060) werden als Ergebnis mehrere Personen ausgegeben
+
+* Bei jedem Zugriff ist die Anzahl der Vergleichvorgänge im Baum auszugeben.
+
+* Der Baum ist grafisch darzustellen bspw als JavaFx Baumelement oder auf einem Canvas oder auch in plantuml (https://plantuml.com/de/mindmap-diagram)
+
+* Erweiterung
+
+** Wird die Liste mit Personen geändert, sind natürlich sämtliche Suchbäume zu aktualisieren.
+
+** Implementieren Sie die Ausgabe in preorder, postorder, levelorder, inorder
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
