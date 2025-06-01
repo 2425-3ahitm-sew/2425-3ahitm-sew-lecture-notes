@@ -186,7 +186,98 @@ var inputStream = clientSocket.getInputStream();
 ** Implementieren Sie die Ausgabe in preorder, postorder, levelorder, inorder
 
 
+=== Bäume
 
+++++
+<iframe width="560" height="315" src="https://www.youtube.com/embed/Etpc_-br5rI?si=ZDvpNxZuLmAo6J3C" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+++++
+
+Rang eines Baumes:: Anzahl seiner direkten Nachfolger
+Ordnung des Baumes:: Maximaler Rang seiner Knoten
+Traversierung:: Systematisches Durchlaufen von Datenstrukturen wie Bäume, Arrays oder Listen
+
+
+
+++++
+<iframe width="560" height="315" src="https://www.youtube.com/embed/b_NjndniOqY?si=HVb7tR0Qe-zg6zTc" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+++++
+Rekursion:: Rekursion ist eine Technik, bei der sich eine Methode selbst aufruft, um ein Problem zu lösen. Dabei wird ein großes Problem in kleinere Teilprobleme zerlegt – bis zu einem Abbruchpunkt (Abbruchbedingung).
+
+==== Baumtraversierungen
+
+* preorder
+** zuerst die Wurzel
+** dann linken Teilbaum
+** zuletzt rechten Teilbaum
+
+* inorder
+** zuerst linken Teilbaum
+** dann die Wurzel
+** zuletzt rechten Teilbaum
+
+* postorder
+** zuerst linken Teilbaum
+** dann rechten Teilbaum
+** zuletzt die Wurzel
+
+* levelorder (Breitensuche)
+** Ebene für Ebene von oben nach unten
+** innerhalb jeder Ebene von links nach rechts
+
+[plantuml]
+----
+@startuml
+!define RECTANGLE class
+
+RECTANGLE 4 {
+}
+
+RECTANGLE 2 {
+}
+
+RECTANGLE 5 {
+}
+
+RECTANGLE 1 {
+}
+
+RECTANGLE 3 {
+}
+
+4 -down-> 2
+4 -down-> 5
+2 -down-> 1
+2 -down-> 3
+
+note right of 4
+Traversierungen:
+Preorder: 4, 2, 1, 3, 5
+Inorder: 1, 2, 3, 4, 5
+Postorder: 1, 3, 2, 5, 4
+Levelorder: 4, 2, 5, 1, 3
+end note
+@enduml
+----
+
+==== Spezielle Bäume
+* Binärbaum
+** Jeder Knoten hat maximal 2 Nachfolger
+* Balancierter Baum
+** AVL Baum
+
+* Vollständiger Baum
+** Ein vollständiger Baum ist ein Binärbaum, bei dem alle Ebenen vollständig gefüllt sind, außer ggf. der letzten die von link nach rechts gefüllt ist.
+** Unterste Ebene ist von links beginnend gefüllt
+** Höhere Ebenen sind gänzlich gefüllt
+
+
+==== Binärer Suchbaum
+* Ein binärer Suchbaum ist eine Binärbaum mit Ordnungsrelation.
+
+* Aufgaben
+** Suchen im binären Suchbaum
+** Einfügen im binären Suchbaum
+** Löschen im binären Suchbaum
 
 
 
