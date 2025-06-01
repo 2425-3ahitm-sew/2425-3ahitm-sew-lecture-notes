@@ -556,7 +556,7 @@ pre.rouge .gs {
 <div class="details">
 <span id="author" class="author">Thomas W. Stütz</span><br>
 <span id="revnumber">version 1.0.0,</span>
-<span id="revdate">2025-05-26</span>
+<span id="revdate">2025-06-01</span>
 <br><span id="revremark">Softwareentwicklung</span>
 </div>
 <div id="toc" class="toc2">
@@ -582,6 +582,7 @@ pre.rouge .gs {
 <li><a href="#_2025_05_26">3. 2025-05-26</a>
 <ul class="sectlevel2">
 <li><a href="#_übung">3.1. Übung</a></li>
+<li><a href="#_bäume">3.2. Bäume</a></li>
 </ul>
 </li>
 </ul>
@@ -843,13 +844,184 @@ var inputStream = clientSocket.getInputStream();</pre>
 </ul>
 </div>
 </div>
+<div class="sect2">
+<h3 id="_bäume"><a class="anchor" href="#_bäume"></a>3.2. Bäume</h3>
+<iframe width="560" height="315" src="https://www.youtube.com/embed/Etpc_-br5rI?si=ZDvpNxZuLmAo6J3C" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+<div class="dlist">
+<dl>
+<dt class="hdlist1">Rang eines Baumes</dt>
+<dd>
+<p>Anzahl seiner direkten Nachfolger</p>
+</dd>
+<dt class="hdlist1">Ordnung des Baumes</dt>
+<dd>
+<p>Maximaler Rang seiner Knoten</p>
+</dd>
+<dt class="hdlist1">Traversierung</dt>
+<dd>
+<p>Systematisches Durchlaufen von Datenstrukturen wie Bäume, Arrays oder Listen</p>
+</dd>
+</dl>
+</div>
+<iframe width="560" height="315" src="https://www.youtube.com/embed/b_NjndniOqY?si=HVb7tR0Qe-zg6zTc" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+<div class="dlist">
+<dl>
+<dt class="hdlist1">Rekursion</dt>
+<dd>
+<p>Rekursion ist eine Technik, bei der sich eine Methode selbst aufruft, um ein Problem zu lösen. Dabei wird ein großes Problem in kleinere Teilprobleme zerlegt – bis zu einem Abbruchpunkt (Abbruchbedingung).</p>
+</dd>
+</dl>
+</div>
+<div class="sect3">
+<h4 id="_baumtraversierungen"><a class="anchor" href="#_baumtraversierungen"></a>3.2.1. Baumtraversierungen</h4>
+<div class="ulist">
+<ul>
+<li>
+<p>preorder</p>
+<div class="ulist">
+<ul>
+<li>
+<p>zuerst die Wurzel</p>
+</li>
+<li>
+<p>dann linken Teilbaum</p>
+</li>
+<li>
+<p>zuletzt rechten Teilbaum</p>
+</li>
+</ul>
+</div>
+</li>
+<li>
+<p>inorder</p>
+<div class="ulist">
+<ul>
+<li>
+<p>zuerst linken Teilbaum</p>
+</li>
+<li>
+<p>dann die Wurzel</p>
+</li>
+<li>
+<p>zuletzt rechten Teilbaum</p>
+</li>
+</ul>
+</div>
+</li>
+<li>
+<p>postorder</p>
+<div class="ulist">
+<ul>
+<li>
+<p>zuerst linken Teilbaum</p>
+</li>
+<li>
+<p>dann rechten Teilbaum</p>
+</li>
+<li>
+<p>zuletzt die Wurzel</p>
+</li>
+</ul>
+</div>
+</li>
+<li>
+<p>levelorder (Breitensuche)</p>
+<div class="ulist">
+<ul>
+<li>
+<p>Ebene für Ebene von oben nach unten</p>
+</li>
+<li>
+<p>innerhalb jeder Ebene von links nach rechts</p>
+</li>
+</ul>
+</div>
+</li>
+</ul>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="images/diag-plantuml-md5-7ea8d2701c1e1f884bce7065fd594fbe.png" alt="Diagram" width="332" height="313">
+</div>
+</div>
+</div>
+<div class="sect3">
+<h4 id="_spezielle_bäume"><a class="anchor" href="#_spezielle_bäume"></a>3.2.2. Spezielle Bäume</h4>
+<div class="ulist">
+<ul>
+<li>
+<p>Binärbaum</p>
+<div class="ulist">
+<ul>
+<li>
+<p>Jeder Knoten hat maximal 2 Nachfolger</p>
+</li>
+</ul>
+</div>
+</li>
+<li>
+<p>Balancierter Baum</p>
+<div class="ulist">
+<ul>
+<li>
+<p>AVL Baum</p>
+</li>
+</ul>
+</div>
+</li>
+<li>
+<p>Vollständiger Baum</p>
+<div class="ulist">
+<ul>
+<li>
+<p>Ein vollständiger Baum ist ein Binärbaum, bei dem alle Ebenen vollständig gefüllt sind, außer ggf. der letzten die von link nach rechts gefüllt ist.</p>
+</li>
+<li>
+<p>Unterste Ebene ist von links beginnend gefüllt</p>
+</li>
+<li>
+<p>Höhere Ebenen sind gänzlich gefüllt</p>
+</li>
+</ul>
+</div>
+</li>
+</ul>
+</div>
+</div>
+<div class="sect3">
+<h4 id="_binärer_suchbaum"><a class="anchor" href="#_binärer_suchbaum"></a>3.2.3. Binärer Suchbaum</h4>
+<div class="ulist">
+<ul>
+<li>
+<p>Ein binärer Suchbaum ist eine Binärbaum mit Ordnungsrelation.</p>
+</li>
+<li>
+<p>Aufgaben</p>
+<div class="ulist">
+<ul>
+<li>
+<p>Suchen im binären Suchbaum</p>
+</li>
+<li>
+<p>Einfügen im binären Suchbaum</p>
+</li>
+<li>
+<p>Löschen im binären Suchbaum</p>
+</li>
+</ul>
+</div>
+</li>
+</ul>
+</div>
+</div>
+</div>
 </div>
 </div>
 </div>
 <div id="footer">
 <div id="footer-text">
 Version 1.0.0<br>
-Last updated 2025-05-26 12:26:31 UTC
+Last updated 2025-06-01 07:40:30 UTC
 </div>
 </div>
 </body>
